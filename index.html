@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Women's Day Shreya ❤️</title>
+
+<style>
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* PAGE SYSTEM */
+
+.page{
+display:none;
+min-height:100vh;
+padding:80px 20px;
+}
+
+.active{
+display:block;
+}
+
+/* TITLE */
+
+h1{
+font-size:clamp(32px,5vw,50px);
+margin-bottom:20px;
+}
+
+/* BUTTON */
+
+button{
+padding:12px 25px;
+font-size:16px;
+border:none;
+border-radius:30px;
+background:rgba(255,255,255,0.9);
+color:#ff4d6d;
+font-weight:bold;
+cursor:pointer;
+margin:10px;
+backdrop-filter:blur(10px);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* GLASS CARD */
+
+.card{
+background:rgba(255,255,255,0.18);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.35);
+box-shadow:0 8px 32px rgba(0,0,0,0.2);
+padding:25px;
+border-radius:18px;
+margin:15px auto;
+max-width:700px;
+}
+
+/* REASONS GRID */
+
+.reasons-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+max-width:900px;
+margin:auto;
+}
+
+.reason{
+background:rgba(255,255,255,0.2);
+padding:15px;
+border-radius:12px;
+backdrop-filter:blur(10px);
+transition:0.3s;
+font-size:15px;
+}
+
+.reason:hover{
+transform:scale(1.08);
+background:rgba(255,255,255,0.35);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* FLOATING HEARTS */
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:20px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+100%{transform:translateY(-120vh)}
+}
+
+/* TIMELINE */
+
+.timeline{
+max-width:700px;
+margin:auto;
+text-align:left;
+}
+
+.timeline div{
+margin:15px 0;
+padding-left:15px;
+border-left:4px solid white;
+}
+
+/* LOVE LETTER */
+
+.letter{
+background:white;
+color:#333;
+border-radius:15px;
+max-width:600px;
+margin:auto;
+height:80px;
+overflow:hidden;
+transition:1s;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.letter.open{
+height:340px;
+}
+
+.letter-content{
+padding:25px;
+opacity:0;
+transition:1s;
+}
+
+.letter.open .letter-content{
+opacity:1;
+}
+
+/* SPARKLE HEARTS */
+
+.sparkle{
+position:absolute;
+color:#ff4d6d;
+font-size:18px;
+animation:sparkle 3s infinite;
+}
+
+@keyframes sparkle{
+0%{opacity:0;transform:scale(0)}
+50%{opacity:1;transform:scale(1.3)}
+100%{opacity:0;transform:scale(0)}
+}
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+pointer-events:none;
+}
+
+/* FORM */
+
+input,select,textarea{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:8px;
+border:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="fireworks"></canvas>
+
+<!-- PAGE 1 -->
+
+<div class="page active" id="page1">
+<h1 id="typing"></h1>
+<p>For the most amazing girl in my life ❤️</p>
+<button onclick="nextPage(2)">Start Surprise</button>
+</div>
+
+<!-- PAGE 2 -->
+
+<div class="page" id="page2">
+<h1>Why You're Amazing</h1>
+<div class="card">Your smile brightens my world</div>
+<div class="card">You inspire me every day</div>
+<div class="card">You support my dreams</div>
+<div class="card">You make life beautiful</div>
+<button onclick="nextPage(3)">Next</button>
+</div>
+
+<!-- QUIZ -->
+
+<div class="page" id="page3">
+
+<h1>Love Quiz 💖</h1>
+
+<div class="card">
+
+<form action="https://formsubmit.co/pratyush181997@gmail.com" method="POST">
+
+<input type="hidden" name="_subject" value="Shreya Love Quiz Answers ❤️">
+<input type="hidden" name="_captcha" value="false">
+
+<p>1. Who is the cutest?</p>
+<select name="Cutest">
+<option>Meri Baby</option>
+<option>Only You</option>
+<option>My Girlfriend Shreya</option>
+<option>My Wife Shreya</option>
+</select>
+
+<p>2. Who loves Shreya most?</p>
+<select name="Love">
+<option>Me</option>
+<option>Still Me</option>
+<option>Always Me</option>
+<option>All of the above</option>
+</select>
+
+<p>3. Our dream destination?</p>
+<input type="text" name="Trip">
+
+<p>4. Your favourite memory with me?</p>
+<input type="text" name="Memory">
+
+<p>5. One thing you love about me?</p>
+<input type="text" name="LoveThing">
+
+<p>6. Our love in one word?</p>
+<input type="text" name="LoveWord">
+
+<p>7. Song that reminds you of me?</p>
+<input type="text" name="Song">
+
+<p>8. One future plan for us?</p>
+<input type="text" name="Future">
+
+<p>9. Favourite thing we do together?</p>
+<input type="text" name="Activity">
+
+<p>10. Message for me ❤️</p>
+<textarea name="Message"></textarea>
+
+<button type="submit">Send My Answers ❤️</button>
+
+</form>
+
+</div>
+
+<button onclick="nextPage(4)">Next</button>
+
+</div>
+
+<!-- 100 REASONS -->
+
+<div class="page" id="page4">
+
+<h1>100 Reasons I Love You</h1>
+
+<div class="reasons-grid" id="reasons"></div>
+
+<button onclick="nextPage(6)">Our Story</button>
+
+</div>
+
+<!-- TIMELINE (UNCHANGED) -->
+
+<div class="page" id="page6">
+
+<h1>Our Love Timeline</h1>
+
+<div class="timeline">
+
+<div>❤️ The day we first met 12th Jan 2025 the best day of my life meeting the love of my life like we were destined to be together.</div>
+<div>💬 Our First Movie Date - That day when i was waiting for my baby , as soon i saw my baby , so beautiful and lively feeling the heat still walking happily and wearing a mask , from blowing air to you to taking so many pictutes in threater, choosing popcorn and coke , feeding you with my hand and making you eat first then eating the remaning, baby ko coke pasand hay aur phir baby ko apna coke se pilana.</div>
+<div>😊 Our First Bike Ride - The first bike ride when i came to pick baby up after her exam, baby was little nervous ki kaisa hoga after exam milna but i knew ki baby se milna mtlab always aacha and special , and then little rain baby hoding me from behind felt like ye time rukh jaye aur main aur mere baby bs ye moment jiye. Our GT650 is waiting baby</div>
+<div>💘 Our First Car Ride - You are always motivation when you told me that ki car you like , i was like baby ke liye car leni hay and then car seekhna just to take you on long drive and that day came when baby sat on our first car for the very first time, from bucling the seat belt for you from holding your hand while i drive surpising you with the roses and baby ka reaction jb rose petlas wala surprises baby ko diya tha, Hope you like my driving now baby</div>
+<div>🌸 I will always love you more than anything in this world and will always take care of you always</div>
+
+</div>
+
+<button onclick="nextPage(7)">Love Map</button>
+
+</div>
+
+<!-- MAP -->
+
+<div class="page" id="page7">
+
+<h1>Our Love Map</h1>
+
+<div class="card">
+
+<iframe
+width="100%"
+height="300"
+style="border:0;border-radius:12px"
+loading="lazy"
+src="https://maps.google.com/maps?q=sandish%20compound%20bhagalpur&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+<button onclick="nextPage(8)">Your Letter</button>
+
+</div>
+
+<!-- LETTER -->
+
+<div class="page" id="page8">
+
+<h1>A Letter For You</h1>
+
+<div class="letter" id="letterBox">
+
+<div class="letter-content">
+
+<h2>My Dearest Shreya ❤️</h2>
+
+<p id="loveText"></p>
+
+</div>
+
+</div>
+
+<button onclick="openLetter()">Open Letter</button>
+
+</div>
+
+<script>
+
+/* PAGE SWITCH */
+
+function nextPage(n){
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"))
+document.getElementById("page"+n).classList.add("active")
+window.scrollTo(0,0)
+}
+
+/* FLOATING HEARTS */
+
+function heart(){
+let h=document.createElement("div")
+h.className="heart"
+h.innerHTML="❤️"
+h.style.left=Math.random()*100+"vw"
+document.body.appendChild(h)
+setTimeout(()=>h.remove(),6000)
+}
+
+setInterval(heart,500)
+
+/* TYPING TITLE */
+
+let text="Happy Women's Day Shreya ❤️"
+let i=0
+
+function typing(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i)
+i++
+setTimeout(typing,80)
+}
+}
+
+typing()
+
+/* 100 REAL REASONS */
+
+const reasons=[
+"Your smile lights up my world",
+"You make ordinary days special",
+"You understand me",
+"You support my dreams",
+"You believe in me",
+"You make me laugh",
+"You care deeply",
+"You inspire me",
+"You make life exciting",
+"You give the best hugs",
+"You are kind to everyone",
+"You are beautiful inside and out",
+"You motivate me",
+"You listen to me",
+"You respect me",
+"You trust me",
+"You make me feel safe",
+"You brighten my mood",
+"You are strong",
+"You are caring",
+"You make memories magical",
+"You stay with me in tough times",
+"You celebrate my successes",
+"You comfort me",
+"You make me feel loved",
+"You make my heart race",
+"You are adorable",
+"You are loyal",
+"You are honest",
+"You are thoughtful",
+"You understand my silence",
+"You appreciate little things",
+"You give the sweetest looks",
+"You are my peace",
+"You are my happiness",
+"You are my home",
+"You inspire my future",
+"You believe in us",
+"You make love feel easy",
+"You are my favorite person",
+"You make my life meaningful",
+"You make every moment better",
+"You stand by my side",
+"You make me stronger",
+"You are always there",
+"You care about my happiness",
+"You bring joy into my life",
+"You make me proud",
+"You respect my dreams",
+"You share your dreams with me",
+"You trust our love",
+"You bring warmth to my life",
+"You make my heart calm",
+"You give me hope",
+"You are my sunshine",
+"You understand my heart",
+"You support my goals",
+"You celebrate our love",
+"You believe in forever",
+"You bring peace to my life",
+"You make every hug special",
+"You make me smile daily",
+"You fill my life with love",
+"You give me confidence",
+"You inspire kindness",
+"You care about small details",
+"You make me feel lucky",
+"You make love magical",
+"You make me feel loved",
+"You make me feel special",
+"You bring happiness",
+"You show patience",
+"You understand my feelings",
+"You give beautiful compliments",
+"You make me feel valued",
+"You make me feel important",
+"You respect our relationship",
+"You make life adventurous",
+"You encourage me",
+"You appreciate me",
+"You make life colorful",
+"You care deeply",
+"You trust my heart",
+"You are my soulmate",
+"You make my dreams bigger",
+"You inspire my success",
+"You help me grow",
+"You make our love strong",
+"You stay loyal",
+"You are always honest",
+"You make love safe",
+"You stand with me",
+"You make our love beautiful",
+"You are the best part of my life",
+"you teach me to be better man",
+"you make me understand things"
+
+]
+
+const container=document.getElementById("reasons")
+
+reasons.forEach((r,i)=>{
+let d=document.createElement("div")
+d.className="reason"
+d.innerText=(i+1)+". "+r
+container.appendChild(d)
+})
+
+/* LETTER MESSAGE */
+
+const msg=`My love,
+
+Every day I thank life for bringing you into my world. You are not just someone I love — you are the reason my days feel brighter and my heart feels fuller. Your smile has the power to calm every storm inside me, and your presence makes even the simplest moments feel magical.
+
+I promise to always stand by your side, support your dreams, protect your happiness, and love you more with every passing day. No matter where life takes us, my heart will always belong to you.
+
+You are my peace, my happiness, and the most beautiful part of my life. ❤️
+You are my happiness,
+my peace,
+and my favorite person ❤️
+I love you So much ❤️
+`
+
+let index=0
+
+function openLetter(){
+document.getElementById("letterBox").classList.add("open")
+typeLetter()
+startFireworks()
+sparkles()
+}
+
+function typeLetter(){
+if(index<msg.length){
+document.getElementById("loveText").innerHTML+=msg.charAt(index)
+index++
+setTimeout(typeLetter,40)
+}
+}
+
+/* HEART SPARKLES */
+
+function sparkles(){
+for(let i=0;i<20;i++){
+let s=document.createElement("div")
+s.className="sparkle"
+s.innerHTML="💖"
+s.style.left=Math.random()*100+"vw"
+s.style.top=Math.random()*100+"vh"
+document.body.appendChild(s)
+setTimeout(()=>s.remove(),3000)
+}
+}
+
+/* FIREWORKS */
+
+const canvas=document.getElementById("fireworks")
+const ctx=canvas.getContext("2d")
+
+canvas.width=window.innerWidth
+canvas.height=window.innerHeight
+
+let particles=[]
+
+function startFireworks(){
+for(let i=0;i<120;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+size:Math.random()*4,
+speed:Math.random()*3
+})
+}
+animate()
+}
+
+function animate(){
+ctx.clearRect(0,0,canvas.width,canvas.height)
+
+particles.forEach(p=>{
+ctx.fillStyle="white"
+ctx.fillRect(p.x,p.y,p.size,p.size)
+p.y+=p.speed
+if(p.y>canvas.height)p.y=0
+})
+
+requestAnimationFrame(animate)
+}
+
+</script>
+
+</body>
+</html>
